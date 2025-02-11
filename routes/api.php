@@ -22,6 +22,8 @@ Route::get("/get_category",[CategoryController::class,"getCategory"]);
 Route::get("/get_detail_category/{id}",[CategoryController::class,"getDetailCategory"]);
 Route::put("/update_category/{id}",[CategoryController::class,"update_category"]);
 Route::delete("/hapus_category/{id}",[CategoryController::class,"hapus_category"]);
+Route::post("/login",[AuthController::class,"login"]);
+Route::get("/logout",[AuthController::class,"logout"]);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request)

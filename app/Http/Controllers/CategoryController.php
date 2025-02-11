@@ -11,7 +11,6 @@ class CategoryController extends Controller
 {
     function category(Request $request){
         $validator = Validator::make($request->all(),[
-           
             'category_name'=>'required',
             
         ]);
